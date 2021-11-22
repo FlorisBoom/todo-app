@@ -68,7 +68,7 @@ export default function MainScreen() {
       bg={useColorModeValue('warmGray.50', 'primary.900')}
       w="full"
     >
-      <Masthead title="How's your day, Floris?" image={require('../assets/masthead.png')}><Navbar/></Masthead>
+      <Masthead title="How's your day, Floris?" resizeMode="cover" image={require('../assets/masthead.png')}><Navbar/></Masthead>
       <VStack
         flex={1}
         space={1}

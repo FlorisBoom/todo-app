@@ -1,14 +1,15 @@
 import React from 'react'
-import { ImageSourcePropType } from 'react-native'
+import { ImageResizeMode, ImageSourcePropType } from 'react-native'
 import { Box, VStack, Heading, Image } from 'native-base'
 
 interface Props {
   title: string
   image: ImageSourcePropType
+  resizeMode: ImageResizeMode
   children: React.ReactNode
 }
 
-const Masthead = ({ title, image, children }: Props) => {
+const Masthead = ({ title, image, resizeMode, children }: Props) => {
   return (
     <VStack height="300px" pb={5}>
       <Image
@@ -19,7 +20,7 @@ const Masthead = ({ title, image, children }: Props) => {
         bottom={0}
         w="full"
         height="300px"
-        resizeMode="cover"
+        resizeMode={resizeMode}
         source={image}
         alt="masthead image"
       />
